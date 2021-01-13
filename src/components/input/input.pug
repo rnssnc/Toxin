@@ -1,0 +1,24 @@
+//-
+  options.name - form element name
+  options.type - input type
+  options.placeholder - input placeholder
+  options.pattern - input pattern
+  options.tabIndex - input tabIndex
+  options.required - input required
+  options.label - подпись к checkbox и radio
+
+mixin input(options)
+  if !options
+    - options = {}
+  
+  .input
+    if options.label
+      label.input__label= options.label
+        input.imput_element(
+          type = options.type
+          name = options.name
+          placeholder = options.placeholder
+          pattern = options.pattern
+          tabindex = options.tabindex
+          required = options.required
+        )

@@ -1,0 +1,10 @@
+extends ../base/ui-kit-base/ui-kit-base.pug
+
+include ../../components/input/input.pug
+
+block variables
+  -
+    pageTitle = 'Form elemetns'
+
+block main
+  +input({label: 'text-field', type:'text'})

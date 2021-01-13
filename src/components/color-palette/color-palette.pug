@@ -1,0 +1,15 @@
+//-
+  Array of colors
+  [{color.code, color.caption, color.description},...]
+
+mixin color-palette(colors)
+  if !colors
+    - colors = []
+  
+  ul.color-palette
+    each color in colors
+      li.color-palette__item
+        div.color-palette__item-color-example(style={background: color.code})
+        .color-palette__item-caption__wrapper
+          h2.color-palette__item-caption= color.caption
+          p.color-palette__item-color-description= color.description

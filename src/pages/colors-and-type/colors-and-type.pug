@@ -1,0 +1,57 @@
+extends ../base/ui-kit-base/ui-kit-base.pug
+
+include ../../components/color-palette/color-palette.pug
+
+block variables
+  -
+    pageTitle = 'Colors & type'
+
+block main
+  +color-palette([{
+    caption: 'Dark Shade 100%',
+    description: '#1F2041',
+    code: '#1F2041'
+  },
+  {
+    caption: 'Dark Shade 75%',
+    description: '#1F2041',
+    code: 'rgba(31, 32, 65, 0.75)'
+  },
+  {
+    caption: 'Dark Shade 50%',
+    description: '#1F2041',
+    code: 'rgba(31, 32, 65, 0.5)'
+  },
+  {
+    caption: 'Dark Shade 25%',
+    description: '#1F2041',
+    code: 'rgba(31, 32, 65, 0.25)'
+  },
+  {
+    caption: 'Dark Shade 5%',
+    description: '#1F2041',
+    code: 'rgba(31, 32, 65, 0.05)'
+  },
+  {
+    caption: 'Purple',
+    description: '#BC9CFF',
+    code: '#BC9CFF'
+  },
+  {
+    caption: 'Green',
+    description: '#6FCF97',
+    code: '#6FCF97'
+  }])
+  ul.text-layout
+    .text-layout__item
+      span.text-layout__tag.text-layout--font-size-h1 H1
+      h1.text-layout__description This one is the sub-section or <br> widget title
+    .text-layout__item
+      span.text-layout__tag.text-layout--font-size-h2 H2
+      h2.text-layout__description Next one is the item title inside <br> widgets
+    .text-layout__item
+      span.text-layout__tag.text-layout--font-size-h3 H3
+      h3.text-layout__description This is a label or CTA text
+    .text-layout__item
+      span.text-layout__tag.text-layout--font-size-body Body
+      .text-layout__description This is the body text which is used for most <br> of the design, like paragraphs, lists, etc.
